@@ -8,5 +8,5 @@ rm make_dist.sh
 rm -r _tmp
 make clean
 tar czvf template.tar.gz *
-mv template.tar.gz ..
+mv template.tar.gz ../docs
 cd .. && rm -rf _tmp
