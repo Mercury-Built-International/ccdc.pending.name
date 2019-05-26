@@ -23,7 +23,7 @@ DOCS 	= $(patsubst $(SRCDIR)/%.md, %.html, $(shell find $(SRCDIR) -wholename '*.
 
 
 all: $(DOCDIR) $(DOCS)
-	echo Generating $(DOCS)...
+	@echo Generating $(DOCS)...
 
 %.html: $(SRCDIR)/%.md
 	$(shell $(CC) $^ | $(LD) $(HEADER) $(LDFLAGS) > $(patsubst %.html, $(DOCDIR)/%.html, $@))
@@ -31,8 +31,10 @@ all: $(DOCDIR) $(DOCS)
 $(DOCDIR):
 	mkdir $(DOCDIR)
 
-.phoney: all clean cleandir
+.phoney: all clean cleandir dist
 
 clean:
 	rm -rf $(patsubst %, $(DOCDIR)/%, $(DOCS))
 
+dist:
+	bash make_dist.sh
