@@ -15,7 +15,7 @@ Directions for use of the template:
 
 2. Uncompress it in a clean directory.
 
-3. Remove the contents of `src/index.md` and replace it with your markdown or html content.
+3. Remove the contents of `src/index.md` and nav.md replace it with your markdown or html content.
 
 4. Create your own `*.md` files in `src/` as you see fit.
 
